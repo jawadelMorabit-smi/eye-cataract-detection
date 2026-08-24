@@ -97,6 +97,21 @@ jupyter notebook notebooks/hog-svm-cataract-roboflow.ipynb   # CPU suffit
 Le notebook YOLO attend un runtime GPU Kaggle/Colab et clone ultralytics/yolov5 lui-même.
 Configurer la clé Roboflow via les Secrets Kaggle (`ROBOFLOW_API_KEY`) — ne jamais la coder en dur.
 
+## Citer le dataset
+
+Si vous utilisez ce travail ou les données sous-jacentes, citez le dataset Kaggle original :
+
+```bibtex
+@misc{arnad_2025,
+	title={Eye Detection Dataset},
+	url={https://www.kaggle.com/dsv/11920378},
+	DOI={10.34740/KAGGLE/DSV/11920378},
+	publisher={Kaggle},
+	author={Arnad},
+	year={2025}
+}
+```
+
 ## Avertissement médical
 
 Projet de recherche/pédagogique — **pas un dispositif médical**, pas pour la prise de décision clinique.
