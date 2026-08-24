@@ -90,7 +90,7 @@ Aussi consultables sur Kaggle :
 ## Reproduire
 
 ```bash
-pip install roboflow scikit-image scikit-learn opencv-python matplotlib
+pip install -r requirements.txt
 jupyter notebook notebooks/hog-svm-cataract-roboflow.ipynb   # CPU suffit
 ```
 
