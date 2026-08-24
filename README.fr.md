@@ -9,6 +9,14 @@
 
 Dépistage non invasif de la cataracte à partir de photographies d'yeux : étant donné une image d'œil, détecter la région de l'œil et la classer **saine (sain)** ou **cataracte**, avec deux pipelines complémentaires entraînés sur le même jeu de données.
 
+## Provenance des données
+
+1. **Source brute** : [Eye Detection Dataset (Kaggle, icebearogo)](https://www.kaggle.com/datasets/icebearogo/eye-detection-dataset) — ~2000 images de la région oculaire annotées au format YOLO (~14 % labellisées comme classe pathologique).
+2. **Curation dans [Roboflow](https://universe.roboflow.com/jaouads-workspace/cataract-eye-detection)** : relecture et nettoyage des annotations, **normalisation des IDs de classes** (les données brutes utilisaient `0 = cataracte` ; remappé en `0 = sain`, `1 = cataracte` — vérifié visuellement sur des patches échantillonnés), découpage train/valid/test, et augmentation (**1385 → 4135 images d'entraînement**), exportée en versions v2/v4 du dataset.
+3. Les deux méthodes (patches HOG+SVM et images complètes YOLOv5) ont été entraînées sur cette version curatée.
+
+> Note : une version antérieure du notebook HOG+SVM avait `CLASS_NAMES` inversé (`cataracte`↔`sain`). Les métriques ne sont pas affectées ; les libellés d'affichage ont été corrigés après vérification visuelle d'échantillons.
+
 ## Dataset
 
 [cataract-eye-detection v2 (Roboflow)](https://universe.roboflow.com/jaouads-workspace/cataract-eye-detection) — format YOLO, 2 classes (`sain` / `cataracte`), splits train/valid/test.

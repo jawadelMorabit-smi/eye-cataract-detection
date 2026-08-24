@@ -9,6 +9,14 @@
 
 Non-invasive cataract screening from eye photographs: given an eye image, detect the eye region and classify it as **healthy (sain)** or **cataract**, using two complementary pipelines trained on the same dataset.
 
+## Data provenance
+
+1. **Raw source**: [Eye Detection Dataset (Kaggle, icebearogo)](https://www.kaggle.com/datasets/icebearogo/eye-detection-dataset) — ~2000 eye-region images with YOLO annotations (~14% labeled as the pathology class).
+2. **Curation in [Roboflow](https://universe.roboflow.com/jaouads-workspace/cataract-eye-detection)**: label review and cleaning, **class-ID normalization** (raw data used `0 = cataract`; remapped to `0 = sain`, `1 = cataracte` — verified visually on sampled patches), train/valid/test splitting, and augmentation (**1385 → 4135 training images**), exported as dataset v2/v4.
+3. Both methods (HOG+SVM patches and YOLOv5 full images) were trained on this curated version.
+
+> Note: an earlier version of the HOG+SVM notebook had `CLASS_NAMES` inverted (`cataracte`↔`sain`). Metrics are unaffected; display labels were corrected after visual verification of sampled patches.
+
 ## Dataset
 
 [cataract-eye-detection v2 (Roboflow)](https://universe.roboflow.com/jaouads-workspace/cataract-eye-detection) — YOLO format, 2 classes (`sain` / `cataracte`), train/valid/test splits.
