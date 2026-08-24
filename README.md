@@ -3,6 +3,8 @@
 **Two approaches to detecting cataracts from eye images — classical features vs deep learning**
 *Mini-project · Biomedical Video Analysis · Master BIAM 2025–2026 · FSDM*
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red)
+
 > 🇫🇷 [Readme en français](README.fr.md)
 
 ---

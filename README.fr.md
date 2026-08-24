@@ -3,6 +3,8 @@
 **Deux approches pour détecter la cataracte à partir d'images d'yeux — descripteurs classiques vs deep learning**
 *Mini Projet · Vidéo Biomédicale · Master BIAM 2025–2026 · FSDM*
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red)
+
 > 🇬🇧 [Readme in English](README.md)
 
 ---
